@@ -1,25 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import { Home, Tabbar, Teamwork } from './component';
+
+const data = {
+    name: "Instant collaborations for remote teams",
+    exp: "All in one for your remote team chats, collaboration and track projects"
+}
+const teamwork = {
+    name: "Your Hub for teamwork",
+    exp: "Give everyone you work with—inside and outside your company—a more productive way to stay in sync. Respond faster with emoji, keep conversations focused in channels, and simplify all your communication into one place."
+}
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <>
+            <Tabbar />
+            <div className='body'>
+                <Home {...data} />
+                <Teamwork />
+            </div>
+        </>
+    )
 }
 
 export default App;
